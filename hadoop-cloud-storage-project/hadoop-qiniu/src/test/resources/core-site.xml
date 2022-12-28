@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+    <property>
+        <name>fs.kodo.impl</name>
+        <value>org.apache.hadoop.kodo.KodoFileSystem</value>
+        <description>
+            The implementation class of the Kodo Filesystem.
+        </description>
+    </property>
+    <property>
+        <name>fs.AbstractFileSystem.kodo.impl</name>
+        <value>org.apache.hadoop.kodo.Kodo</value>
+        <description>
+            The implementation class of the Kodo AbstractFileSystem.
+        </description>
+    </property>
+
+    <property>
+        <name>fs.kodo.tmp.dir</name>
+        <value>/tmp/hadoop_kodo</value>
+        <description>
+            Temporary files will be placed here.
+        </description>
+    </property>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="auth-keys.xml">
+        <fallback/>
+    </include>
+</configuration>
